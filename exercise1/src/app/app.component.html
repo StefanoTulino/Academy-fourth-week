@@ -1,0 +1,118 @@
+
+<style>
+
+.insertDiv{
+  align-items: flex-start;
+}
+
+input {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  align-items: center;
+  width: 440px;
+}
+
+.btnAdd {
+  border-radius: 30px;
+  height: 50px;
+  width: 60px;
+  background-color:darkorange;
+  color: white;
+
+}
+
+h4{
+  margin-top: 50px;
+  color:darkorange;
+}
+
+ul li{
+  width: 500px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 20px;
+}
+
+.deleteIcon{
+  margin-left: 300px;
+}
+
+
+
+
+
+  p {
+    margin: 0;
+  }
+
+  .spacer {
+    flex: 1;
+  }
+
+  .toolbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    background-color: #1976d2;
+    color: white;
+    font-weight: 600;
+  }
+
+  .toolbar img {
+    margin: 0 16px;
+  }
+
+  .toolbar #twitter-logo {
+    height: 40px;
+    margin: 0 8px;
+  }
+
+  .toolbar #youtube-logo {
+    height: 40px;
+    margin: 0 16px;
+  }
+
+  .toolbar #twitter-logo:hover,
+  .toolbar #youtube-logo:hover {
+    opacity: 0.8;
+  }
+
+  .content {
+    display: flex;
+    width: 100%;
+    margin: 82px auto 32px;
+    padding: 0 16px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+</style>
+
+
+<div class="content" role="main">
+
+
+  <h4>Todo App</h4>
+  <div class="insertDiv">
+    <input type="text" placeholder="Add Todo" [(ngModel)]="value" >
+    <button class="btnAdd" (click)="addItem()">+</button>
+  </div>
+
+  <ul>
+
+    <li *ngFor="let item of allItems">{{item.value}}
+      <button class="deleteIcon">
+        <mat-icon  (click)="removeItem()">X</mat-icon>
+    </button>
+    </li>
+  </ul>
+  </div>
+
+
+
