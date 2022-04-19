@@ -32,7 +32,7 @@ public class ProdottiServiceImpl implements  ProdottiService{
          prodottiRepository.deleteById(id);
     }
 
-    //MANCA PUT
+    
     @Override
     public void updateName(String id,String name) {
         Optional<Prodotti> p = prodottiRepository.findById(id);
