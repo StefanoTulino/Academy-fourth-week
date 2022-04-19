@@ -52,11 +52,6 @@ public class ConsegneController {
         return new ResponseEntity("change status delivery", HttpStatus.OK);
     }
 
-    //OTHER
-    /*
-    Integer getDeliveriesCountByCity(@PathVariable String id,@RequestParam String city){
-        return consegneRepository.getDeliveriesCountByCity(id,city);
-    }
-     */
+   
 
 }
